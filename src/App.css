@@ -13,6 +13,7 @@
 body {
   margin: 0;
   background: #f5f7fb;
+  overflow-x: hidden;
 }
 
 button {
@@ -64,6 +65,8 @@ button {
   display: flex;
   min-height: 100vh;
   background: linear-gradient(180deg, #f5f7fb 0%, #f0f2f8 100%);
+  width: 100%;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -2216,34 +2219,7 @@ button {
 @media (max-width: 1100px) {
   .quiz-main {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .quiz-overview {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .quiz-overview-stats {
-    width: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-  .quiz-overview-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .quiz-step-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .quiz-step-actions .button,
-  .quiz-focus-actions .button {
-    flex: 1 1 100%;
+    gap: 22px;
   }
 }
 
@@ -2293,6 +2269,190 @@ button {
     min-width: auto;
     flex: 1 1 calc(50% - 12px);
   }
+
+  .content-area {
+    gap: 18px;
+  }
+
+  .student-subjects,
+  .student-quizzes,
+  .student-profile,
+  .student-chat,
+  .student-reading,
+  .staff-overview,
+  .staff-lessons,
+  .staff-form,
+  .staff-plan {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .subject-layout {
+    gap: 18px;
+  }
+
+  .subject-detail {
+    padding: 18px;
+  }
+
+  .home-section {
+    padding: 18px;
+  }
+
+  .hero-card {
+    padding: 26px 22px;
+  }
+
+  .learning-flow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-actions,
+  .daily-actions {
+    flex-wrap: wrap;
+  }
+
+  .hero-actions .button,
+  .daily-actions .button {
+    flex: 1 1 45%;
+  }
+
+  .quiz-overview {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 22px 20px;
+    gap: 18px;
+  }
+
+  .quiz-overview-stats {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .quiz-main {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .quiz-step {
+    padding: 16px;
+  }
+
+  .quiz-step-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .quiz-step-actions .button,
+  .quiz-focus-actions .button {
+    flex: 1 1 140px;
+  }
+
+  .quiz-focus-card {
+    padding: 20px;
+  }
+
+  .chat-widget {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .toolbar-actions {
+    gap: 10px;
+  }
+
+  .grade-lock {
+    width: 100%;
+    text-align: center;
+  }
+
+  .student-bar {
+    padding: 14px;
+  }
+
+  .student-chip {
+    flex: 1 1 100%;
+  }
+
+  .student-subjects,
+  .student-quizzes,
+  .student-profile,
+  .student-chat,
+  .student-reading,
+  .staff-overview,
+  .staff-lessons,
+  .staff-form,
+  .staff-plan {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .home-section {
+    padding: 16px;
+  }
+
+  .subject-detail {
+    padding: 16px;
+  }
+
+  .subject-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+
+  .hero-card {
+    padding: 24px 18px;
+  }
+
+  .hero-actions .button,
+  .daily-actions .button {
+    flex: 1 1 100%;
+  }
+
+  .quiz-overview {
+    padding: 20px 16px;
+  }
+
+  .quiz-overview-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-main {
+    padding: 18px 16px;
+    gap: 18px;
+  }
+
+  .quiz-step {
+    padding: 14px;
+  }
+
+  .quiz-step-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .quiz-step-actions .button,
+  .quiz-focus-actions .button {
+    flex: 1 1 100%;
+  }
+
+  .quiz-focus-card {
+    padding: 18px;
+  }
+
+  .quiz-panel > .quiz-card {
+    padding: 18px;
+  }
+
+  .chat-widget {
+    right: 12px;
+    left: 12px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -2309,6 +2469,56 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+
+  .hero-card {
+    padding: 22px 18px;
+    text-align: center;
+  }
+
+  .hero-brief {
+    align-items: center;
+  }
+
+  .learning-flow {
+    gap: 14px;
+  }
+
+  .flow-card {
+    padding: 18px;
+  }
+
+  .quiz-overview {
+    padding: 18px 14px;
+    gap: 14px;
+  }
+
+  .quiz-main {
+    padding: 16px 14px;
+    gap: 16px;
+  }
+
+  .quiz-step-marker span {
+    width: 9px;
+    height: 9px;
+    border-width: 2px;
+  }
+
+  .quiz-step::after {
+    left: 8px;
+  }
+
+  .quiz-focus-card {
+    padding: 16px;
+  }
+
+  .quiz-panel > .quiz-card {
+    padding: 16px;
+  }
+
+  .chat-widget {
+    right: 10px;
+    left: 10px;
   }
 }
 
