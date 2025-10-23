@@ -30,7 +30,7 @@ aside.sidebar.sidebar-mobile.sidebar-open {
 span.chat-widget-close-icon {
     display: none;
 }
-button.chat-widget-toggle.chat-widget-toggle-open {
+button.chat-widget-toggle {
     margin-left: 80vw;
 }
 }
