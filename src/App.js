@@ -167,6 +167,21 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    if (typeof document === 'undefined') {
+      return undefined;
+    }
+    const originalOverflow = document.body.style.overflow;
+    if (isMobile && isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isMobile, isSidebarOpen]);
+
   const goToStudentSection = useCallback(
     (section, options = {}) => {
       const { replaceAll = false, replaceTop = false, clearReading = false, clearQuiz = false } =

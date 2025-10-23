@@ -92,7 +92,7 @@ function Sidebar({
           </button>
         )}
       </div>
-      <nav className="sidebar-nav">
+      <nav className={`sidebar-nav ${isMobile ? 'sidebar-nav-mobile' : ''}`}>
         {items.map((item) => (
           <button
             key={item.id}
