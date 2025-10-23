@@ -19,13 +19,18 @@ body {
 button {
   font-family: inherit;
 }
+
+@media all and (max-width: 768px) {
+  button.chat-widget-toggle {
+    width:55px;
+}
 aside.sidebar.sidebar-mobile.sidebar-open {
     display: block !important;
 }
-.chat-widget {
-        width: 55px;
-        left: unset !important;
-    }
+span.chat-widget-close-icon {
+    display: none;
+}
+}
 .button {
   display: inline-flex;
   align-items: center;
