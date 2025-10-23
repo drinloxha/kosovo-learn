@@ -30,6 +30,9 @@ aside.sidebar.sidebar-mobile.sidebar-open {
 span.chat-widget-close-icon {
     display: none;
 }
+button.chat-widget-toggle.chat-widget-toggle-open {
+    margin-left: 80vw;
+}
 }
 .button {
   display: inline-flex;
